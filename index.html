@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Hora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="time"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ingresar Hora</h1>
+        <p>Por favor, ingresa la hora específica del reloj:</p>
+        <input type="time" id="timeInput">
+        <button onclick="checkTime()">Enviar</button>
+        <p id="errorMessage" class="error" style="display: none;">Hora incorrecta, inténtalo de nuevo.</p>
+    </div>
+    <script>
+        const correctTime = "14:30"; // La hora correcta a ingresar
+
+        function checkTime() {
+            const userInput = document.getElementById("timeInput").value;
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (userInput === correctTime) {
+                window.location.href = "success.html";
+            } else {
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
