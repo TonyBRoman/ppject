@@ -31,7 +31,7 @@ input[type="text"] {
     height: 10vw; /* Utilizar unidades relativas a la altura de la ventana */
     max-height: 50px; /* Establecer una altura máxima para evitar que sean demasiado grandes en pantallas grandes */
     text-align: center;
-    font-size: 1.5em; /* Aumentar el tamaño de la fuente */
+    font-size: 1em; /* Aumentar el tamaño de la fuente */
     border: 2px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
