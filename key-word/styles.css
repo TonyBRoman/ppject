@@ -26,12 +26,12 @@ h1 {
 }
 
 input[type="text"] {
-    width: 10vw; /* Utilizar unidades relativas a la anchura de la ventana */
-    max-width: 50px; /* Establecer un ancho máximo para evitar que sean demasiado grandes en pantallas grandes */
-    height: 10vw; /* Utilizar unidades relativas a la altura de la ventana */
-    max-height: 50px; /* Establecer una altura máxima para evitar que sean demasiado grandes en pantallas grandes */
+    width: 12vw; /* Utilizar unidades relativas a la anchura de la ventana */
+    max-width: 60px; /* Establecer un ancho máximo para evitar que sean demasiado grandes en pantallas grandes */
+    height: 12vw; /* Utilizar unidades relativas a la altura de la ventana */
+    max-height: 60px; /* Establecer una altura máxima para evitar que sean demasiado grandes en pantallas grandes */
     text-align: center;
-    font-size: .5em; /* Aumentar el tamaño de la fuente */
+    font-size: 1.5em; /* Ajustar el tamaño de la fuente */
     border: 2px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
