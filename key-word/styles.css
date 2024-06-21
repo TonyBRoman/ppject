@@ -8,28 +8,40 @@ body {
     margin: 0;
     background-color: #000;
     color: #fff;
+    padding: 10px; /* Añadir padding para que no se corten los elementos en móviles */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
+
 h1 {
     color: #fff;
     padding: 1em;
 }
+
 .input-container {
     display: flex;
-    gap: 10px;
+    gap: 5px; /* Reducir el espacio entre los cuadros para que quepan mejor en pantallas pequeñas */
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Permitir que los cuadros se ajusten a múltiples líneas si es necesario */
+    justify-content: center; /* Centrar los cuadros dentro del contenedor */
 }
+
 input[type="text"] {
-    width: 25px;
-    height: 25px;
+    width: 10vw; /* Utilizar unidades relativas a la anchura de la ventana */
+    max-width: 50px; /* Establecer un ancho máximo para evitar que sean demasiado grandes en pantallas grandes */
+    height: 10vw; /* Utilizar unidades relativas a la altura de la ventana */
+    max-height: 50px; /* Establecer una altura máxima para evitar que sean demasiado grandes en pantallas grandes */
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Aumentar el tamaño de la fuente */
     border: 2px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
+
 .hint {
     margin-top: 20px;
     color: #ff0000;
 }
+
 .correct {
     background-color: green;
     color: white;
@@ -38,6 +50,7 @@ input[type="text"] {
     display: inline-block;
     border-radius: 50%;
 }
+
 .present {
     background-color: yellow;
     color: black;
@@ -46,6 +59,7 @@ input[type="text"] {
     display: inline-block;
     border-radius: 50%;
 }
+
 .absent {
     background-color: red;
     color: white;
@@ -54,13 +68,15 @@ input[type="text"] {
     display: inline-block;
     border-radius: 50%;
 }
+
 .color-info {
-    margin-top: 20px;
-    text-align: left;
+    text-align: center; /* Centrar la información de color */
 }
+
 .color-info p {
     margin: 5px 0;
 }
+
 #validate-btn {
     background-color: #007BFF;
     color: white;
@@ -71,6 +87,7 @@ input[type="text"] {
     cursor: pointer;
     transition: transform 0.1s;
 }
+
 #validate-btn:active {
     transform: scale(0.95);
 }
