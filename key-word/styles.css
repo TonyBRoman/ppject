@@ -35,6 +35,8 @@ input[type="text"] {
     border: 2px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    padding: 0; /* Eliminar el padding interno */
+    margin: 0; /* Eliminar el margen interno */
 }
 
 .hint {
