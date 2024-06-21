@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina la Palabra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Adivina la palabra</h1>
+    <div class="input-container">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+    </div>
+    <button id="validate-btn" onclick="checkWord()">Verificar</button>
+    <p id="message" class="hint"></p>
+    <div class="color-info">
+        <p><span class="correct"></span> Verde: Letra y lugar correcto</p>
+        <p><span class="present"></span> Amarillo: Letra en la palabra pero en posición incorrecta</p>
+        <p><span class="absent"></span> Rojo: Letra no existe en la palabra</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
