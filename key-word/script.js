@@ -1,29 +1,36 @@
-const correctWord = "caridad";
+const correctWord = "amarillo";
 
 function checkWord() {
     const inputs = document.querySelectorAll('input[type="text"]');
     let userWord = '';
     let correctWordCopy = correctWord.split('');
 
+    // Concatenar valores ingresados por el usuario
     inputs.forEach(input => {
         userWord += input.value.toLowerCase();
     });
 
+    // Limpiar clases previas
+    inputs.forEach(input => {
+        input.classList.remove('correct', 'present', 'absent');
+    });
+
+    // Verificar cada letra
     inputs.forEach((input, index) => {
         const char = input.value.toLowerCase();
-        input.classList.remove('correct', 'present', 'absent');
 
         if (char === correctWord[index]) {
             input.classList.add('correct');
-            correctWordCopy[index] = null; // Remove correct letter from the copy
+            correctWordCopy[index] = null; // Remover letra correcta de la copia
         } else if (correctWordCopy.includes(char)) {
             input.classList.add('present');
-            correctWordCopy[correctWordCopy.indexOf(char)] = null; // Remove present letter from the copy
+            correctWordCopy[correctWordCopy.indexOf(char)] = null; // Remover letra presente de la copia
         } else {
             input.classList.add('absent');
         }
     });
 
+    // Verificar si la palabra es correcta
     if (userWord === correctWord) {
         window.location.href = "pista.html";
     } else {
@@ -31,6 +38,7 @@ function checkWord() {
     }
 }
 
+// Manejar navegación entre cuadros de entrada
 document.querySelectorAll('input[type="text"]').forEach((input, index, arr) => {
     input.addEventListener('input', () => {
         if (input.value.length === 1 && index < arr.length - 1) {
