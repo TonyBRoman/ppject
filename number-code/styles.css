@@ -23,7 +23,8 @@ body {
 .code-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
 .code-box {
